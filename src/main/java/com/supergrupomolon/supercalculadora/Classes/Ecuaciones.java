@@ -26,7 +26,7 @@ public class Ecuaciones {
      * @param c Tercer valor de la ecuación de segundo grado
      * @return Devuelve un ArrayList con dos valores, 1 o ninguno en función de los parametros dados
      */
-    public ArrayList segundoGrado(double a, double b, double c){
+    public ArrayList<Double> segundoGrado(double a, double b, double c){
 
         double result = (b*b) - 4*a*c;
 
