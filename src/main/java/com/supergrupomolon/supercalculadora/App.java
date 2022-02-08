@@ -1,5 +1,7 @@
 package com.supergrupomolon.supercalculadora;
 
+import com.supergrupomolon.supercalculadora.Classes.Ecuaciones;
+
 import com.supergrupomolon.supercalculadora.Classes.Poligono;
 
 /**
@@ -14,5 +16,7 @@ public class App {
 
         System.out.println(cuadrado.area());
         System.out.println(cuadrado.perimetro());
+
+        Ecuaciones ecuation = new Ecuaciones();
     }
 }
