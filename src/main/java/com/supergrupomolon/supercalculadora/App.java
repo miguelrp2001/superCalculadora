@@ -7,5 +7,7 @@ public class App
     public static void main( String[] args )
     {
         Ecuaciones ecuation = new Ecuaciones();
+
+        System.out.println(ecuation.ecuacionesSuperiores(4));
     }
 }

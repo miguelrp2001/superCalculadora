@@ -54,7 +54,7 @@ public class Ecuaciones {
      * @param arr Lista de los valores independientes del array
      * @return Valor de la X
      */
-    public int Ruffini(ArrayList<Integer> mult, ArrayList<Integer> arr){
+    private int Ruffini(ArrayList<Integer> mult, ArrayList<Integer> arr){
 
         int exponente = arr.size()-1;
 
@@ -112,7 +112,7 @@ public class Ecuaciones {
         
         int resultado = Ruffini(multiplos, valores);
 
-        if(Ruffini(multiplos, valores) == 0){
+        if(this.Ruffini(multiplos, valores) == 0){
             return "La ecuación introducida no es exácta";
         }else{
             return ""+resultado;
