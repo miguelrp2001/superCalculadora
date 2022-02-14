@@ -54,9 +54,10 @@ public class Ecuaciones {
      * @param arr Lista de los valores independientes del array
      * @return Valor de la X
      */
-    private int Ruffini(ArrayList<Integer> mult, ArrayList<Integer> arr){
+    private ArrayList<Integer> Ruffini(ArrayList<Integer> mult, ArrayList<Integer> arr){
 
         int exponente = arr.size()-1;
+        ArrayList<Integer> resultados = new ArrayList<Integer>();
 
         for (Integer mul : mult) {
             int flag=0;
@@ -71,13 +72,13 @@ public class Ecuaciones {
             }
             
             if(flag == 0){
-                return mul;
+                resultados.add(mul);
             }
 
             exponente = arr.size()-1;
         }
 
-        return 0;
+        return resultados;
     }
 
     /**
@@ -110,12 +111,19 @@ public class Ecuaciones {
             }
         }
         
-        int resultado = Ruffini(multiplos, valores);
+        ArrayList<Integer> resultado = Ruffini(multiplos, valores);
 
-        if(this.Ruffini(multiplos, valores) == 0){
-            return "La ecuación introducida no es exácta";
+        if(resultado.size()>0){
+
+            String msg = "Los resultados son: ";
+
+            for (Integer num : resultado) {
+                msg += num;
+            }
+
+            return msg;
         }else{
-            return ""+resultado;
+            return "La ecuación introducida no es exacta";
         }
     }
 }
