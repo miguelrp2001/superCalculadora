@@ -56,9 +56,9 @@ public class App {
             default:
                 break;
         }
-        if (opcion2 > 0) {
+
+        if(opcion2 > 0){
             opciones.menuBasica(opcion2);
         }
->>>>>>> 415c48dc9122aea3c55cd105da45fc05dbab9607
     }
 }
