@@ -16,7 +16,7 @@ public class opciones {
     }
 
     public static String ecuaciones() {
-        return "*****Ecuaciones***** \n1. Primer grado. \n2. Segundo grado. \n3. Ruffini. \n";
+        return "*****Ecuaciones***** \n1. Primer grado. \n2. Segundo grado. \n3. Grado Superior. \n";
     }
 
     public static void menuEcuaciones(int op) {
@@ -46,7 +46,7 @@ public class opciones {
                 int n1;
                 System.out.print("Grado de la ecuación: ");
                 n1 = t.nextInt();
-                System.out.print(ec.ecuacionesSuperiores(n1));
+                System.out.println(ec.ecuacionesSuperiores(n1));
                 break;
         }
     }
