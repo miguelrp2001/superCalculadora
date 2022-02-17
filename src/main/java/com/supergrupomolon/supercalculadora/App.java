@@ -14,15 +14,6 @@ import com.supergrupomolon.supercalculadora.opciones;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-
-        Poligono cuadrado = new Poligono(6, 8);
-
-        System.out.println(cuadrado.area());
-        System.out.println(cuadrado.perimetro());
-
-        Ecuaciones ecuation = new Ecuaciones();
-
         System.out.print(opciones.menu());
         Scanner teclado = new Scanner(System.in);
         System.out.print("Opción: ");
@@ -51,14 +42,21 @@ public class App {
 
                 break;
             case 4:
+                System.out.print(opciones.ecuaciones());
+                opcion2 = teclado.nextInt();
                 break;
 
             default:
                 break;
         }
 
-        if(opcion2 > 0){
+        if (opcion2 > 0 && opcion == 1) {
             opciones.menuBasica(opcion2);
+
+        }
+        if (opcion2 > 0 && opcion == 4) {
+            opciones.menuEcuaciones(opcion2);
+
         }
     }
 }
