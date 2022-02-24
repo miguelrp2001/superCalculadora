@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Ecuaciones {
     
     /**
-     * 
      * @param a Primer valor de la ecuación de primer grado
      * @param b Segundo valor de la ecuación de primer grado
      * @param c Tercer valor de la ecuacion
@@ -28,13 +27,13 @@ public class Ecuaciones {
      */
     public ArrayList<Double> segundoGrado(double a, double b, double c){
 
-        double result = (b*b) - 4*a*c;
+        double result = (Math.pow(b, 2)) - (4*a*c);
 
         ArrayList<Double> arr = new ArrayList<Double>();
 
         if(result > 0.0){
-            arr.add(-b + Math.pow(result, 0.5) / (2.0*a));
-            arr.add(-b - Math.pow(result, 0.5) / (2.0*a));
+            arr.add((-b + Math.sqrt(result)) / (2.0*a));
+            arr.add((-b - Math.sqrt(result)) / (2.0*a));
 
             return arr;
 
