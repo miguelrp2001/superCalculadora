@@ -1,12 +1,8 @@
 package com.supergrupomolon.supercalculadora;
 
-import com.supergrupomolon.supercalculadora.Classes.Ecuaciones;
-
 import com.supergrupomolon.supercalculadora.Classes.Poligono;
 
 import java.util.Scanner;
-
-import com.supergrupomolon.supercalculadora.opciones;
 
 /**
  * Hello world!
