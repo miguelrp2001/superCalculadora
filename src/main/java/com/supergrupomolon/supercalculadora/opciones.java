@@ -16,7 +16,7 @@ public class opciones {
     }
 
     public static String ecuaciones() {
-        return "*****Ecuaciones***** \n1. Primer grado. \n2. Segundo grado. \n3. Ruffini. \n";
+        return "*****Ecuaciones***** \n1. Primer grado. \n2. Segundo grado. \n3. Grado Superior. \n";
     }
 
     public static void menuEcuaciones(int op) {
@@ -46,7 +46,25 @@ public class opciones {
                 int n1;
                 System.out.print("Grado de la ecuación: ");
                 n1 = t.nextInt();
-                System.out.print(ec.ecuacionesSuperiores(n1));
+
+                ArrayList<Integer> resultado = ec.ecuacionesSuperiores(n1);
+                if (resultado.size() > 0) {
+
+                    String msg = "Los resultados son: ";
+
+                    for (Integer num : resultado) {
+
+                        if (resultado.size() > resultado.indexOf(num) + 1) {
+                            msg += (num + ", ");
+                        } else {
+                            msg += num;
+                        }
+                    }
+
+                    System.out.println(msg);
+                } else {
+                    System.out.println("La ecuación introducida no es exacta");
+                }
                 break;
         }
     }

@@ -86,14 +86,14 @@ public class Ecuaciones {
      * @param grado Tamaño de la ecuación que se usará para delimitar la ecuación
      * @return Devolverá un string erroneo si el calculo por Ruffini no es exacto, y un string con el resultado correcto si encuentra la solución
      */
-    public String ecuacionesSuperiores(int grado){
+    public ArrayList ecuacionesSuperiores(int grado){
         Scanner teclado = new Scanner(System.in);
         ArrayList<Integer> valores = new ArrayList<Integer>();
         ArrayList<Integer> multiplos = new ArrayList<Integer>();
         int independiente=0;
 
         for(int x=0; x<grado; x++){
-            System.out.println("Introduzca el valor "+(x+1)+" :");
+            System.out.print("Introduzca el valor "+(x+1)+": ");
             int valor = teclado.nextInt();
             
             if(x==grado-1){
@@ -111,19 +111,24 @@ public class Ecuaciones {
             }
         }
         
-        ArrayList<Integer> resultado = Ruffini(multiplos, valores);
+        return Ruffini(multiplos, valores);
 
-        if(resultado.size()>0){
+        // if(resultado.size()>0){
 
-            String msg = "Los resultados son: ";
+        //     String msg = "Los resultados son: ";
 
-            for (Integer num : resultado) {
-                msg += num;
-            }
+        //     for (Integer num : resultado) {
+                
+        //         if(resultado.size() > resultado.indexOf(num)+1){
+        //             msg += (num+", ");
+        //         }else{
+        //             msg +=num;
+        //         }
+        //     }
 
-            return msg;
-        }else{
-            return "La ecuación introducida no es exacta";
-        }
+        //     return msg;
+        // }else{
+        //     return "La ecuación introducida no es exacta";
+        // }
     }
 }
