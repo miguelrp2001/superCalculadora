@@ -20,7 +20,7 @@ public class Poligono {
 
         area /= 2;
 
-        return area;
+        return (Math.round(area * 100.0) / 100.0);
     }
 
     public Poligono(int numLados, double lado) {
