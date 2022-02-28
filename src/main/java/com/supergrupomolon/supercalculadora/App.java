@@ -1,5 +1,6 @@
 package com.supergrupomolon.supercalculadora;
 
+import com.supergrupomolon.supercalculadora.Classes.Pitagoras;
 import com.supergrupomolon.supercalculadora.Classes.Poligono;
 
 import java.util.Scanner;
@@ -35,6 +36,36 @@ public class App {
                 System.out.println(nuevo.perimetro());
                 break;
             case 3:
+                double catetoA = -1, catetoB = -1, hipotenusa = -1;
+                String ladoIncognito = "n";
+                System.out.println(
+                        "Para calcular el teorema de pitágoras, debemos saber al menos 2 de los lados de un triángulo rectángulo.\nA contunación, introduzca los lados del triángulo rectángulo, en el lado incógnito, introduzca 0.\n\n                     *\n                     * *\n                     *   *     C\n                 A   *     *   \n                     *       *\n                     *         *\n                     * * * * * * * \n                           B\n                     \n\n\n");
+
+                while (catetoA < 0) {
+                    System.out.print("Cateto A: ");
+                    catetoA = teclado.nextDouble();
+                    if (catetoA == 0) {
+                        ladoIncognito = "el cateto A";
+                    }
+                }
+                while (catetoB < 0) {
+                    System.out.print("Cateto B: ");
+                    catetoB = teclado.nextDouble();
+                    if (catetoB == 0) {
+                        ladoIncognito = "el cateto B";
+                    }
+                }
+                while (hipotenusa < 0) {
+                    System.out.print("Hipotenusa: ");
+                    hipotenusa = teclado.nextDouble();
+                    if (hipotenusa == 0) {
+                        ladoIncognito = "la hipotenusa";
+                    }
+                }
+
+                double resultado = Pitagoras.calcularPitagoras(catetoA, catetoB, hipotenusa);
+
+                System.out.println("Según nuestros cálculos, " + ladoIncognito + " es de: " + resultado);
 
                 break;
             case 4:
